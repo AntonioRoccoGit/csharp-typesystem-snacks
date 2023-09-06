@@ -93,13 +93,38 @@ namespace csharp_typesystem_snacks
                     Console.WriteLine($"La somma di tutti i numeri è: {totalSum}");
                     break;
 
+                case 4:
+                    //Snack 4: Calcola la somma e la media dei numeri da 2 a 10.
+                    float avarageNumber;
+                    int totalSum4 = 0;
+                    int minNumber = 2;
+                    int maxNumber = 10;
+                    int divisonNumber = 1; 
+
+                    Console.WriteLine("-----------------------------------Somma e Media?------------------------------------");
+                    Console.WriteLine("Hai mai voluto sapere la media e la somma dei numeri da 2 a 10?");
+                    for (int i = minNumber; i <= maxNumber; i++)
+                    {
+                        totalSum4 = totalSum4 + i;
+                        divisonNumber++;
+                    }
+                    avarageNumber = totalSum4 / divisonNumber;
+
+                    Console.WriteLine($"La somma dei numeri è: {totalSum4}");
+                    Console.WriteLine($"La media dei numeri è: {avarageNumber}");
+
+                    break;
+
+                case 5:
+                    //Snack 5: Il software chiede all’utente di inserire un numero.Se il numero inserito è pari, stampa il numero, se è dispari, stampa il numero successivo.
+
+
+                    break;
             }
 
 
 
 
-            //Snack 4: Calcola la somma e la media dei numeri da 2 a 10.
-            //Snack 5: Il software chiede all’utente di inserire un numero.Se il numero inserito è pari, stampa il numero, se è dispari, stampa il numero successivo.
             //Snack 6: In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby. Chiedi all’utente il suo nome e comunicagli se può partecipare o meno alla festa.
             //Snack 7: Crea un array vuoto. Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo nell’array.
             //Snack 8: Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari.
