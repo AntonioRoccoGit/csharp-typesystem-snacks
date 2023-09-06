@@ -75,6 +75,7 @@ namespace csharp_typesystem_snacks
                     }
 
                     Console.WriteLine(message);
+
                     break;
 
                 case 3:
@@ -91,6 +92,7 @@ namespace csharp_typesystem_snacks
                     }
 
                     Console.WriteLine($"La somma di tutti i numeri è: {totalSum}");
+
                     break;
 
                 case 4:
@@ -108,16 +110,54 @@ namespace csharp_typesystem_snacks
                         totalSum4 = totalSum4 + i;
                         divisonNumber++;
                     }
-                    avarageNumber = totalSum4 / divisonNumber;
-
+                    avarageNumber = (float)totalSum4 / (float)divisonNumber;
                     Console.WriteLine($"La somma dei numeri è: {totalSum4}");
-                    Console.WriteLine($"La media dei numeri è: {avarageNumber}");
+                    Console.WriteLine($"La media dei numeri è: {MathF.Round(avarageNumber, 2)}");
 
                     break;
 
                 case 5:
                     //Snack 5: Il software chiede all’utente di inserire un numero.Se il numero inserito è pari, stampa il numero, se è dispari, stampa il numero successivo.
+                    int userNumber;
+                    int oddNumber;
 
+                    Console.WriteLine("-------------------------------------Solo Pari--------------------------------------");
+                    Console.WriteLine("Inserisci un numero: ");
+                    userNumber = int.Parse(Console.ReadLine());
+
+                    if (userNumber % 2 == 0) 
+                    {
+                        oddNumber = userNumber;
+                    } else
+                    {
+                        oddNumber = userNumber + 1;
+                    }
+
+                    Console.WriteLine("ECCO UN BEL NUMERO PARI: " + oddNumber);
+
+                    break;
+
+                case 6:
+                    //Snack 6: In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby. Chiedi all’utente il suo nome e comunicagli se può partecipare o meno alla festa.
+                    string[] bookedGuest = { "Pippo", "Pluto", "Mario", "Davide", "Admin", "Foo", "Bar", };
+                    string userName;
+                    string userMessage = "Mi dispiace dovremo ucciderla";
+
+                    Console.WriteLine("--------------------------------------Invito?---------------------------------------");
+                    Console.WriteLine("C'è un impostore tra la fila... e tu con quell'aria minacciosa, sei stato invitato?");
+                    Console.WriteLine();
+                    Console.WriteLine("Dai il tuo nome: ");
+                    userName = Console.ReadLine();
+
+                    for (int i = 0; i < bookedGuest.Length; i++) 
+                    { 
+                        if (bookedGuest[i] == userName)
+                        {
+                            userMessage = "Mi scusi non l'avevo riconosciuta";
+                        }
+                    }
+
+                    Console.WriteLine(userMessage);
 
                     break;
             }
@@ -125,7 +165,6 @@ namespace csharp_typesystem_snacks
 
 
 
-            //Snack 6: In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby. Chiedi all’utente il suo nome e comunicagli se può partecipare o meno alla festa.
             //Snack 7: Crea un array vuoto. Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo nell’array.
             //Snack 8: Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari.
             //Snack 9: Crea un array vuoto e chiedi all’utente un numero da inserire nell’array.Continua a chiedere i numeri all’utente e a inserirli nell’array, fino a quando la somma degli elementi è minore di 50.
