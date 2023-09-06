@@ -212,16 +212,56 @@ namespace csharp_typesystem_snacks
                     Console.WriteLine("Ecco il risultato dell'esperimento: " + sumEvenIndex);
 
                     break;
+
+                case 9:
+                    //Snack 9: Crea un array vuoto e chiedi all’utente un numero da inserire nell’array.Continua a chiedere i numeri all’utente e a inserirli nell’array, fino a quando la somma degli elementi è minore di 50.
+                    int[] fiftyArray = new int[50];
+                    int userNumberSum = 0;
+
+                    Console.WriteLine("----------------------------------Non più di 50!!------------------------------------");
+                    Console.WriteLine("Inserisci i numeri fino ad arrivare a 50");
+
+
+
+                    for (int i = 0; i < fiftyArray.Length; i++)
+                    {
+                        int numberInput = int.Parse(Console.ReadLine());
+                        fiftyArray[i] = numberInput;
+                        userNumberSum = userNumberSum + numberInput;
+                        Console.WriteLine($"Sei ancora a: {userNumberSum}");
+                        Console.WriteLine();
+
+                        if ( userNumberSum >= 50)
+                        {
+                            i = fiftyArray.Length - 1;
+                        }
+
+                    }
+
+                    Console.WriteLine($"Finalmente sei arrivato a 50!! ");
+                    Console.WriteLine();   
+                    Console.WriteLine("Ecco un riepilogo delle tue giocate");
+
+                    for (int i = 0; i < fiftyArray.Length; i++)
+                    {
+                        int currentElement = fiftyArray[i];
+                        if(currentElement != 0)
+                        {
+                        Console.WriteLine($"{i + 1}) {currentElement}");
+                        }
+                    }
+
+                    break;
+
             }
 
 
 
 
-            //Snack 9: Crea un array vuoto e chiedi all’utente un numero da inserire nell’array.Continua a chiedere i numeri all’utente e a inserirli nell’array, fino a quando la somma degli elementi è minore di 50.
             //Snack 10: Fai inserire un numero, che chiameremo N, all’utente.Genera N array, ognuno formato da 10 numeri casuali tra 1 e 100.Ogni volta che ne crei uno, stampalo a schermo.
             //Buon lavoro!
             //POSSIBILE BONUS:
-            //Creare un menù dove mostro gli snacks all'utente e chiedo quale vuole eseguire. Una volta la scelta il programma esegue il snack corrispondente.
+            //Creare un menù dove mostro gli snacks all'utente e chiedo quale vuole eseguire. Una volta la scelta il programma esegue lo snack corrispondente.
         }
     }
 }
