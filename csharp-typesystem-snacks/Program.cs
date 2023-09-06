@@ -160,12 +160,40 @@ namespace csharp_typesystem_snacks
                     Console.WriteLine(userMessage);
 
                     break;
+
+                case 7:
+                    //Snack 7: Crea un array vuoto. Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo nell’array.
+                    int[] evenArray = new int[6];
+                    int positionCounter = 0;
+
+                    Console.WriteLine("-------------------------------------Free Dispari--------------------------------------");
+
+                    for (int i = 0; i < evenArray.Length; i++)
+                    {
+                        Console.WriteLine($"Inserisci {evenArray.Length} numeri. {i+1}°:  ");
+                        int number = int.Parse(Console.ReadLine());
+
+                        //se il numero è dispari
+                        if(number % 2 == 1)
+                        {
+                            evenArray[positionCounter] = number;
+                            positionCounter++;
+                        }
+
+                    }
+
+                    Console.WriteLine("Ecco i tuoi numeri sfortunati!!! :)");
+                    for (int i = 0; i < evenArray.Length; i++)
+                    {
+                        Console.WriteLine(evenArray[i]);
+                    }
+
+                    break;
             }
 
 
 
 
-            //Snack 7: Crea un array vuoto. Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo nell’array.
             //Snack 8: Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari.
             //Snack 9: Crea un array vuoto e chiedi all’utente un numero da inserire nell’array.Continua a chiedere i numeri all’utente e a inserirli nell’array, fino a quando la somma degli elementi è minore di 50.
             //Snack 10: Fai inserire un numero, che chiameremo N, all’utente.Genera N array, ognuno formato da 10 numeri casuali tra 1 e 100.Ogni volta che ne crei uno, stampalo a schermo.
