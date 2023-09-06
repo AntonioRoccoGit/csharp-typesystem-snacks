@@ -253,15 +253,30 @@ namespace csharp_typesystem_snacks
 
                     break;
 
+                case 10:
+                    //Snack 10: Fai inserire un numero, che chiameremo N, all’utente.Genera N array, ognuno formato da 10 numeri casuali tra 1 e 100.Ogni volta che ne crei uno, stampalo a schermo.
+
+                    Random random = new Random();
+                    int[] polymorphArray = new int[10];
+                    int manyArray;
+                    
+                    Console.WriteLine("----------------------------------***La Magia***------------------------------------");
+                    Console.WriteLine("Scegliere un numero e osservare la magia");
+                    manyArray = int.Parse(Console.ReadLine());
+                    Console.WriteLine();
+
+                    for (int i = 0; i < manyArray; i++)
+                    {
+                        Console.WriteLine($"Questa è la {i+1} giocata");
+                        for (int j = 0; j < polymorphArray.Length; j++)
+                        {
+                            polymorphArray[j] = random.Next(101);
+                            Console.WriteLine((j+1) + ") " + polymorphArray[j]);
+                        }
+                    }
+
+                    break;
             }
-
-
-
-
-            //Snack 10: Fai inserire un numero, che chiameremo N, all’utente.Genera N array, ognuno formato da 10 numeri casuali tra 1 e 100.Ogni volta che ne crei uno, stampalo a schermo.
-            //Buon lavoro!
-            //POSSIBILE BONUS:
-            //Creare un menù dove mostro gli snacks all'utente e chiedo quale vuole eseguire. Una volta la scelta il programma esegue lo snack corrispondente.
         }
     }
 }
