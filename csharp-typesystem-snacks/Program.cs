@@ -189,12 +189,34 @@ namespace csharp_typesystem_snacks
                     }
 
                     break;
+
+                case 8:
+                    //Snack 8: Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari.
+                    int[] intArray = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+                    int sumEvenIndex = 0;
+
+                    Console.WriteLine("-------------------------------------Indice Dispari--------------------------------------");
+                    Console.WriteLine("Di una serie di numeri, sommeremo solo quelli con indice dispari");
+                    Console.WriteLine();
+                    Console.WriteLine("Sequenza: ");
+                    for(int i = 0; i < intArray.Length; i++)
+                    {
+                        int currentElement = intArray[i];
+                        Console.WriteLine($"Numero: {currentElement} ha index: {i} - {(i%2 == 0 ? "pari" : "dispari")}");
+                        if(i % 2 == 1)
+                        {
+                            sumEvenIndex = sumEvenIndex + currentElement;
+                        }
+                    }
+
+                    Console.WriteLine("Ecco il risultato dell'esperimento: " + sumEvenIndex);
+
+                    break;
             }
 
 
 
 
-            //Snack 8: Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari.
             //Snack 9: Crea un array vuoto e chiedi all’utente un numero da inserire nell’array.Continua a chiedere i numeri all’utente e a inserirli nell’array, fino a quando la somma degli elementi è minore di 50.
             //Snack 10: Fai inserire un numero, che chiameremo N, all’utente.Genera N array, ognuno formato da 10 numeri casuali tra 1 e 100.Ogni volta che ne crei uno, stampalo a schermo.
             //Buon lavoro!
